@@ -93,8 +93,8 @@ def process_post(url, written_profiles):
     INSTAGRAM_URL = url
 
 
-    API_TOKEN = "apify_api_KnwzUftqerpeinIehOIk26r745Bdow3yLFjv"
-    TASK_ID = "obxdFNXezzGyQSXQc"
+    API_TOKEN = "write your API_TOKEN here"
+    TASK_ID = "whrite your TASK_ID here"
 
 
     import re
@@ -217,7 +217,7 @@ def process_post(url, written_profiles):
         
     return
 import time 
-API_KEY ="AIzaSyBqELppGHnJX6XP3T1B5_J4QD5JXMWwXcU"
+API_KEY ="Write your API_KEY here"
 
 genai.configure(api_key=API_KEY)
 
@@ -237,7 +237,7 @@ def generate_prompt_from_data(df):
         return summary
 
 def get_digital_marketing_suggestions(prompt):
-        genai.configure(api_key="AIzaSyBqELppGHnJX6XP3T1B5_J4QD5JXMWwXcU")
+        genai.configure(api_key="Write your API_KEY here")
         model = genai.GenerativeModel('gemini-1.5-flash')
         response = model.generate_content([prompt])
         return response.text
@@ -500,4 +500,5 @@ def main():
 #-----------
 if __name__ == "__main__": 
     main()
+
 
