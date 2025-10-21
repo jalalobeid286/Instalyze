@@ -82,8 +82,8 @@ def extract_post_links(username):
 def process_post(url, written_profiles):
     import instaloader
 
-    API_TOKEN = "apify_api_KnwzUftqerpeinIehOIk26r745Bdow3yLFjv"
-    TASK_ID = "obxdFNXezzGyQSXQc"
+    API_TOKEN = "Write your API_TOKEN here"
+    TASK_ID = "Write your TASK_ID here"
 
     match = re.search(r"/(reel|p|tv)/([^/?]+)", url)
     if not match:
