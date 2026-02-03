@@ -2,7 +2,6 @@ import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
 import time
 import os
 import google.generativeai as genai
@@ -19,7 +18,6 @@ from bidi.algorithm import get_display
 import datetime
 from collections import Counter
 from nltk.corpus import stopwords
-import re
 import matplotlib.font_manager as fm
 
 def extract_post_links(username):
@@ -84,10 +82,8 @@ def extract_post_links(username):
 
 def process_post(url, written_profiles):
     import instaloader
-    import json
-    import re
     import requests
-    import time
+  
 
 
     INSTAGRAM_URL = url
@@ -97,7 +93,7 @@ def process_post(url, written_profiles):
     TASK_ID = "whrite your TASK_ID here"
 
 
-    import re
+    
     match = re.search(r"/(reel|p|tv)/([^/?]+)", INSTAGRAM_URL)
     if not match:
         print("❌ Invalid Instagram URL format.")
@@ -178,8 +174,7 @@ def process_post(url, written_profiles):
     dataset_id = status_data['data']['defaultDatasetId']
     items_url = f"https://api.apify.com/v2/datasets/{dataset_id}/items?token={API_TOKEN}&clean=true"
     items_response = requests.get(items_url)
-    comments_data = items_response.json()
-    import os 
+    comments_data = items_response.json() 
     import csv
     profile_csv = f"{username}_profile.csv"
     if username not in written_profiles:
@@ -215,8 +210,7 @@ def process_post(url, written_profiles):
    
        
         
-    return
-import time 
+    return 
 API_KEY ="Write your API_KEY here"
 
 genai.configure(api_key=API_KEY)
@@ -500,5 +494,6 @@ def main():
 #-----------
 if __name__ == "__main__": 
     main()
+
 
 
