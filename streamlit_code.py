@@ -49,8 +49,6 @@ def plot_visualizations(df, df1):
     df.columns = df.columns.str.strip()
     from nltk.corpus import stopwords
     from collections import Counter
-    import arabic_reshaper
-    from bidi.algorithm import get_display
 
 # Ensure text column exists
     df['Comments'] = df['Comments'].fillna('')
@@ -250,4 +248,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
